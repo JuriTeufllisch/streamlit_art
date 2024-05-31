@@ -40,8 +40,8 @@ plt.style.use('dark_background')
 fig, ax = plt.subplots(figsize=(image_size/100,image_size/100))
 ax.scatter(dots_x, dots_y, s=pixelsize, c=colors, alpha=1, marker=marker)
 ax.axis('off')
-ax.set_ylim(0,n)
-ax.set_xlim(0,n)
+ax.set_ylim(0,n+1)
+ax.set_xlim(0,n+1)
 
 fig.savefig('art.png')
 
