@@ -11,7 +11,7 @@ st.header('- simple, but unique -')
 st.sidebar.header('Input parameters')
 
 n = st.sidebar.slider('width of image', min_value=1, max_value=200)
-image_size = st.sidebar.slider('image size in pixels', min_value=2, max_value=10000)
+image_size = st.sidebar.slider('image size in pixels', min_value=2, max_value=5000)
 
 lower_size = st.sidebar.slider('lower size of symbols', min_value=1, max_value=int((image_size/n)**2))
 upper_size = st.sidebar.slider('upper size of symbols', min_value=2, max_value=int(2*(image_size/n)**2))
