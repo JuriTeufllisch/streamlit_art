@@ -8,17 +8,19 @@ import random
 st.title('Create Digital Art')
 st.header('- simple, but unique -')
 
-n = st.slider('width of image', min_value=1, max_value=200)
-image_size = st.slider('image size in pixels', min_value=2, max_value=2000)
+st.sidebar.header('Input parameters')
 
-lower_size = st.slider('lower size of symbols', min_value=1, max_value=int((image_size/n)**2))
-upper_size = st.slider('upper size of symbols', min_value=2, max_value=int(2*(image_size/n)**2))
+n = st.sidebar.slider('width of image', min_value=1, max_value=200)
+image_size = st.sidebar.slider('image size in pixels', min_value=2, max_value=2000)
 
-marker = st.select_slider('marker style', options=['o', 'v', '^', '<', '>', '8', 's', 'p', '*', 'h', 'H', 'D', 'd', 'P', 'X'])
+lower_size = st.sidebar.slider('lower size of symbols', min_value=1, max_value=int((image_size/n)**2))
+upper_size = st.sidebar.slider('upper size of symbols', min_value=2, max_value=int(2*(image_size/n)**2))
 
-red = st.slider('red', min_value=0, max_value=256)
-green = st.slider('green', min_value=0, max_value=256)
-blue = st.slider('blue', min_value=0, max_value=256)
+marker = st.sidebar.select_slider('marker style', options=['o', 'v', '^', '<', '>', '8', 's', 'p', '*', 'h', 'H', 'D', 'd', 'P', 'X'])
+
+red = st.sidebar.slider('red', min_value=0, max_value=256)
+green = st.sidebar.slider('green', min_value=0, max_value=256)
+blue = st.sidebar.slider('blue', min_value=0, max_value=256)
 
 
 pixelsize = []
