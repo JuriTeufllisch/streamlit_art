@@ -21,6 +21,7 @@ marker = st.sidebar.select_slider('marker style', options=['o', 'v', '^', '<', '
 red = st.sidebar.slider('red', min_value=0, max_value=256)
 green = st.sidebar.slider('green', min_value=0, max_value=256)
 blue = st.sidebar.slider('blue', min_value=0, max_value=256)
+alpha = st.sidebar.slider('opacity', min_value=0, max_value=1)
 
 
 pixelsize = []
@@ -40,7 +41,7 @@ for i in range(len(x)):
 plt.style.use('dark_background')
 
 fig, ax = plt.subplots(figsize=(image_size/100,image_size/100))
-ax.scatter(dots_x, dots_y, s=pixelsize, c=colors, alpha=1, marker=marker)
+ax.scatter(dots_x, dots_y, s=pixelsize, c=colors, alpha=alpha, marker=marker)
 ax.axis('off')
 ax.set_ylim(0,n+1)
 ax.set_xlim(0,n+1)
