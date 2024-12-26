@@ -21,7 +21,7 @@ marker = st.sidebar.select_slider('marker style', options=['o', 'v', '^', '<', '
 red = st.sidebar.slider('red', min_value=0, max_value=256)
 green = st.sidebar.slider('green', min_value=0, max_value=256)
 blue = st.sidebar.slider('blue', min_value=0, max_value=256)
-alpha = st.sidebar.slider('opacity', min_value=0, max_value=100)
+alpha = st.sidebar.slider('opacity', min_value=0, max_value=100, value=100)
 
 
 pixelsize = []
